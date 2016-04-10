@@ -1,0 +1,131 @@
+<html>
+<head>
+    <title>N493JL</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="checklists.css">
+</head>
+<body>
+  <ul class="nav nav-tabs">
+    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Startup <span class="caret"></span></a>
+      <ul class="dropdown-menu">
+        <li><a data-toggle="tab" href="#preflight">Preflight</a></li>
+        <li><a data-toggle="tab" href="#beforestart">Before Start</a></li>
+        <li><a data-toggle="tab" href="#taxirunup">Taxi/Runup</a></li>
+        <li><a data-toggle="tab" href="#takeoff">Takeoff</a></li>
+      </ul>
+    </li>
+    <li><a data-toggle="tab" href="#climb">Climb</a></li>
+    <li><a data-toggle="tab" href="#cruise">Cruise</a></li>
+    <li><a data-toggle="tab" href="#descent">Descent</a></li>
+    <li><a data-toggle="tab" href="#approach">Approach/Landing</a></li>
+    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Shutdown <span class="caret"></span></a>
+      <ul class="dropdown-menu">
+        <li><a data-toggle="tab" href="#afterlanding">After Landing</a></li>
+        <li><a data-toggle="tab" href="#securing">Securing</a></li>
+      </ul>
+    </li>
+    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Details <span class="caret"></span></a>
+      <ul class="dropdown-menu">
+        <li><a data-toggle="tab" href="#airspeeds">Airspeeds</a></li>
+        <li><a data-toggle="tab" href="#edm">Engine Monitor</a></li>
+        <li><a data-toggle="tab" href="#densityaltitude">High Density Altitude</a></li>
+      </ul>
+    </li>
+    <li><a data-toggle="tab" href="#emergency" class="emergency">Emergency Procedures</a></li>
+  </ul>
+  <div class="container-fluid">
+  <div class="row">
+    <div id="status"></div>
+    <div><button type="button" id="newflight" class="btn btn-primary btn-lg">New Flight</button></div>
+  </div>
+
+  <div class="row">
+    <div class="tab-content">
+      <div id="preflight" class="tab-pane fade in active">
+        <h3>Preflight</h3>
+
+        <section><h4>Cabin</h4>
+          <ol>
+            <li><input type="checkbox" id="pc-docs">Documents AROW</input>
+              <ul>
+                <li>Airworthiness - Left Footwell</li>
+                <li>Registration - Left Footwell</li>
+                <li>POH - Behind Left Seat</li>
+                <li>Weight and Balance - Calculated
+                  <ul>
+                    <li>Max T/O: 3100 lbs</li>
+                    <li>Max Landing: 2950 lbs</li>
+                </ul></li>
+              </ul></li>
+            <li><input type="checkbox" id="pc-brake">Parking Brake - SET</input></li>
+            <li><input type="checkbox" id="pc-control">Control Wheel Lock - REMOVE</input></li>
+            <li><input type="checkbox" id="pc-ignition">Ignition Switch - OFF</input></li>
+            <li><input type="checkbox" id="pc-masteron">Master Switch - ON</input></li>
+            <li><input type="checkbox" id="pc-fuel">Fuel Quantity - CHECK Indicators and Annunciators</input></li>
+            <li><input type="checkbox" id="pc-avionicson">Avionics Master Switch - ON</input>
+              <ul>
+                <li>Avionics Cooling Fan - LISTEN for operation</li>
+                <li>Set Fuel Quantity in EDM, if Quantity is Known</li>
+                <li>Avionics Master Switch - OFF</li>
+              </ul>
+            </li>
+            <li><input type="checkbox" id="pc-static">Alternate Static Source Value - OFF</input></li>
+            <li><input type="checkbox" id="pc-annun">Annunicator Panel - TEST (all lights flash)</input></li>
+            <li><input type="checkbox" id="pc-flaps">Flaps - EXTEND</input></li>
+            <li><input type="checkbox" id="pc-fuel">Fuel Selector Valve - BOTH</input></li>
+            <li><input type="checkbox" id="pc-cowl">Cowl Flaps - OPEN</input></li>
+            <li><input type="checkbox" id="pc-pitot">Pitot Heat - Check</input></li>
+            <li><input type="checkbox" id="pc-masteroff">Master Switch - OFF</input></li>
+            <li><input type="checkbox" id="pc-baggage">Baggage Door - SECURE</input></li>
+          </ol>
+        </section>
+
+        <section><h4>Empennage</h4>
+          <ol>
+            <li><input type="checkbox">Tail Tie-Down - REMOVE</input></li>
+            <li><input type="checkbox">Control Surfaces - CHECK Freedom of Movement and Security</input></li>
+            <li><input type="checkbox">Trim Tab - CHECK SECURITY</input></li>
+            <li><input type="checkbox">Antennas - CHECK Attachment and Condition</input></li>
+          </ol>
+        </section>
+        <section><h4>Right Wing</h4>
+          <ol>
+            <li><input type="checkbox">Aileron - CHECK Freedom of Movement and Security</input></li>
+            <li><input type="checkbox">Flap - CHECK Security and Condition</input></li>
+            <li><input type="checkbox">Wing Tie-Down - REMOVE</input></li>
+            <li><input type="checkbox">Fuel Tank Vent - CHECK for stoppage</input></li>
+            <li><input type="checkbox">Main Wheel Tire - CHECK Inflation and Condition (42psi)</input></li>
+            <li><input type="checkbox">Fuel Tank Drain - CHECK Contamination and Grade</input>
+              <ul><li>5 Drains per Wing</li></ul>
+            </li>
+            <li><input type="checkbox">Fuel Quantity - CHECK Visually</input></li>
+            <li><input type="checkbox">Fuel Filler Cap - SECURE and CHECK Vent not Obstructed</input></li>
+          </ol>
+        </section>
+        <section><h4>Nose</h4></section>
+        <section><h4>Left Wing</h4></section>
+      </div>
+      <div id="beforestart" class="tab-pane fade">
+        <section>
+        <h3>Before Engine Start</h3>
+          <ol>
+            <li><input type="checkbox">Preflight Complete</input></li>
+            <li><input type="checkbox">Passengers Briefed</input></li>
+            <li><input type="checkbox">Seats - ADJUST and LOCK</input></li>
+            <li><input type="checkbox">Doors - SECURE</input></li>
+          </ol>
+        </section>
+      </div>
+      <div id="taxirunup" class="tab-pane fade">
+        <h3>Taxi/Runup</h3>
+        <h4>Taxi</h4>
+        <h4>Run Up</h4>
+      </div>
+    </div>
+  </div>
+  </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script src="checklists.js"></script>
+</html>
